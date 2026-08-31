@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&M Agencia Maritima</title>
+    <link rel="icon" type="image/png" href="LOGO_bandera.png">
+    <meta name="description" content="B&M Agencia Marítima - Líderes en agenciamiento naviero, practicaje y servicios marítimos en Chile, Perú y Argentina desde 1997.">
+    <meta name="author" content="B&M Agencia Marítima">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header>
+        <div class="nav-container">
+
+            <a href="#inicio" class="logo">
+                <img src="LOGO_30años.png" alt="B&M Agencia Marítima" class="logo-img">
+            </a>
+
+            <nav id="nav-principal">
+                <ul>
+                    <li><a href="#inicio"    data-i18n="nav-inicio">Inicio</a></li>
+                    <li><a href="#nosotros"  data-i18n="nav-nosotros">Nosotros</a></li>
+                    <li><a href="#servicios" data-i18n="nav-servicios">Servicios</a></li>
+                    <li><a href="#contacto"  data-i18n="nav-contacto">Contacto</a></li>
+                    <li><a href="#" data-i18n="nav-equipo" onclick="event.preventDefault();abrirModal('modal-equipo')">Equipo</a></li>
+                </ul>
+            </nav>
+
+            <!-- Selector de idiomas con globo -->
+            <div class="lang-selector" id="lang-selector">
+                <button class="lang-globe-btn" id="lang-toggle" aria-label="Seleccionar idioma">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    <span class="lang-code-display">ES</span>
+                    <svg class="lang-arrow" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l4 4 4-4"/></svg>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="idioma-btn activo" data-lang="es" data-code="ES">
+                        <span class="fi fi-cl"></span>
+                        <span class="lang-name">Español</span>
+                    </button>
+                    <button class="idioma-btn" data-lang="en" data-code="EN">
+                        <span class="fi fi-gb"></span>
+                        <span class="lang-name">English</span>
+                    </button>
+                    <button class="idioma-btn" data-lang="de" data-code="DE">
+                        <span class="fi fi-de"></span>
+                        <span class="lang-name">Deutsch</span>
+                    </button>
+                    <button class="idioma-btn" data-lang="pt" data-code="PT">
+                        <span class="fi fi-br"></span>
+                        <span class="lang-name">Português</span>
+                    </button>
+                    <button class="idioma-btn" data-lang="fr" data-code="FR">
+                        <span class="fi fi-fr"></span>
+                        <span class="lang-name">Français</span>
+                    </button>
+                    <button class="idioma-btn" data-lang="zh" data-code="ZH">
+                        <span class="fi fi-cn"></span>
+                        <span class="lang-name">中文</span>
+                    </button>
+                    <button class="idioma-btn" data-lang="ja" data-code="JA">
+                        <span class="fi fi-jp"></span>
+                        <span class="lang-name">日本語</span>
+                    </button>
+                </div>
+            </div>
+
+            <button class="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- SECCIÓN INICIO / HERO -->
+    <section id="inicio">
+        <div class="slides-container">
+            <div class="slide slide-1 activo"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+            <div class="slide slide-4"></div>
+            <div class="slide slide-5"></div>
+            <div class="slide slide-6"></div>
+        </div>
+
+        <div class="hero-contenido">
+            <h1 data-i18n="hero-titulo">Soluciones Marítimas de <span>Excelencia</span></h1>
+            <p data-i18n="hero-subtitulo">Líderes en agenciamiento naviero, practicaje y servicios marítimos en Chile, Perú, Argentina y Uruguay. Más de 27 años conectando el mundo por mar.</p>
+            <div class="hero-botones">
+                <a href="#servicios" class="btn btn-primario" data-i18n="hero-btn1">Nuestros Servicios</a>
+                <a href="#contacto"  class="btn btn-secundario" data-i18n="hero-btn2">Contáctenos</a>
+            </div>
+        </div>
+
+        <div class="slide-nav">
+            <button class="slide-punto activo" aria-label="Slide 1"></button>
+            <button class="slide-punto" aria-label="Slide 2"></button>
+            <button class="slide-punto" aria-label="Slide 3"></button>
+            <button class="slide-punto" aria-label="Slide 4"></button>
+            <button class="slide-punto" aria-label="Slide 5"></button>
+            <button class="slide-punto" aria-label="Slide 6"></button>
+        </div>
+
+        <!-- Ola decorativa inferior -->
+        <div class="hero-ola">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 90" preserveAspectRatio="none">
+                <path fill="#2563a8" d="M0,45 C180,90 360,0 540,45 C720,90 900,0 1080,45 C1260,90 1380,20 1440,40 L1440,90 L0,90 Z"/>
+            </svg>
+        </div>
+
+    </section>
+
+
+    <!-- ESTADÍSTICAS -->
+    <div class="estadisticas">
+        <div class="estadisticas-grid">
+            <div class="estadistica-item animar">
+                <span class="estadistica-numero" data-objetivo="27" data-sufijo="+">27+</span>
+                <span class="estadistica-label" data-i18n="stat1-label">Años de Experiencia</span>
+            </div>
+            <div class="estadistica-item animar">
+                <span class="estadistica-numero" data-objetivo="4" data-sufijo="">4</span>
+                <span class="estadistica-label" data-i18n="stat2-label">Países de Operación</span>
+            </div>
+            <div class="estadistica-item animar">
+                <span class="estadistica-numero" data-objetivo="500" data-sufijo="+">500+</span>
+                <span class="estadistica-label" data-i18n="stat3-label">Buques al Año</span>
+            </div>
+            <div class="estadistica-item animar">
+                <span class="estadistica-numero" data-objetivo="17" data-sufijo="">17</span>
+                <span class="estadistica-label" data-i18n="stat4-label">Puertos Atendidos</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros">
+        <div class="contenedor">
+            <div class="nosotros-grid">
+
+                <div class="nosotros-imagen animar">
+                    <img src="HEAD/quien-somos.jpeg" alt="B&M Agencia Marítima" class="img-principal">
+                    <a href="#servicios" class="nosotros-badge">
+                        <span class="anos">30</span>
+                        <span data-i18n="nosotros-badge">Años de<br>Experiencia</span>
+                    </a>
+                </div>
+
+                <div class="nosotros-texto animar">
+                    <h2 data-i18n="nosotros-titulo">¿Quiénes Somos?</h2>
+                    <div class="linea-decorativa"></div>
+                    <p data-i18n="nosotros-p1">B&M es una empresa independiente fundada en 1997 por Hans Bugge y Ansgar Müschen. Desde nuestra oficina central en Santiago de Chile coordinamos todas las operaciones y gestiones administrativas, brindando un servicio marítimo ágil, confiable y personalizado.</p>
+                    <p data-i18n="nosotros-p2">Nuestra amplia experiencia en el mercado naviero nacional e internacional nos permite atender todo tipo de embarcaciones en puertos de Chile, Perú, Argentina y Uruguay. Además, coordinamos servicios de practicaje en el Estrecho de Magallanes, asegurando una gestión eficiente en cada etapa de la operación.</p>
+                    <p data-i18n="nosotros-p3">Cada servicio es supervisado directamente por nuestra oficina central y cuenta con el respaldo en terreno de nuestros capitanes de puerto itinerantes. En B&M combinamos experiencia, presencia operativa y atención personalizada para responder con eficiencia a las necesidades de cada cliente.</p>
+                    <div class="nosotros-botones">
+                        <a href="#contacto" class="btn btn-nosotros" data-i18n="nosotros-btn">Hablemos</a>
+                        <button class="btn btn-nosotros" onclick="abrirModal('modal-equipo')" data-i18n="nosotros-btn-equipo">Equipo</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="valores-seccion animar">
+                <h3 class="valores-titulo-seccion" data-i18n="valores-titulo">Nuestros Valores</h3>
+                <div class="linea-decorativa"></div>
+                <div class="valores-grid">
+                    <div class="valor-card">
+                        <h4 class="valor-titulo" data-i18n="valor1-titulo">Profesionalismo</h4>
+                        <p class="valor-desc" data-i18n="valor1-desc">Abordamos cada proyecto con absoluto profesionalismo con el fin de alcanzar la excelencia.</p>
+                    </div>
+                    <div class="valor-card">
+                        <h4 class="valor-titulo" data-i18n="valor2-titulo">Innovación</h4>
+                        <p class="valor-desc" data-i18n="valor2-desc">Usamos tecnología de punta para crear soluciones.</p>
+                    </div>
+                    <div class="valor-card">
+                        <h4 class="valor-titulo" data-i18n="valor3-titulo">Compromiso</h4>
+                        <p class="valor-desc" data-i18n="valor3-desc">El objetivo del cliente lo hacemos propio, y trabajamos para ser un verdadero socio estratégico y cumplir con cada una de sus expectativas.</p>
+                    </div>
+                    <div class="valor-card">
+                        <h4 class="valor-titulo" data-i18n="valor4-titulo">Confianza</h4>
+                        <p class="valor-desc" data-i18n="valor4-desc">Construimos lazos basados en la confianza, transparencia y seguridad garantizando la confidencialidad de los datos de nuestros clientes.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN MISIÓN / VISIÓN -->
+    <section id="mision-vision">
+        <div class="mv-overlay"></div>
+        <div class="contenedor mv-contenedor">
+            <div class="mv-card animar">
+                <h3 class="mv-titulo" data-i18n="mision-titulo">Misión</h3>
+                <div class="linea-decorativa"></div>
+                <p class="mv-texto" data-i18n="mision-texto">Ser una agencia naviera 100 % independiente, capaz de proteger, representar y orientar en todo momento a nuestros clientes en todos los ámbitos del mercado marítimo y portuario.</p>
+            </div>
+            <div class="mv-card animar">
+                <h3 class="mv-titulo" data-i18n="vision-titulo">Visión</h3>
+                <div class="linea-decorativa"></div>
+                <p class="mv-texto" data-i18n="vision-texto">Ser reconocidos como una agencia naviera líder, destacada por sus altos estándares de servicio, atención cercana y dedicación permanente, inspirando confianza y credibilidad, y ofreciendo soluciones competitivas.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios">
+        <div class="contenedor">
+
+            <div class="seccion-titulo animar">
+                <h2 data-i18n="servicios-titulo">Nuestros Servicios</h2>
+                <div class="linea-decorativa"></div>
+                <p data-i18n="servicios-desc">B&M cuenta con más de 26 años de experiencia como agente naviero. Si bien esta actividad continúa siendo el centro de nuestro negocio, a lo largo de los años hemos incorporado diversos servicios para responder integralmente a las necesidades de nuestros clientes.</p>
+                <p data-i18n="servicios-desc2">Al trabajar con B&M, descubrirá nuestra pasión por el servicio y el compromiso que ponemos en todo lo que hacemos.</p>
+                <p class="servicios-tagline" data-i18n="servicios-desc3">Viva la experiencia B&M. Descubra la inteligencia B&M.</p>
+            </div>
+
+            <div class="servicios-grid">
+
+                <div class="servicio-card animar" data-modal="modal-agenciamiento" style="cursor:pointer;">
+                    <div class="servicio-img-wrap">
+                        <img src="img/ship-agency.avif" alt="Ship Agency" class="servicio-img">
+                    </div>
+                    <h3 data-i18n="serv1-titulo">Agenciamiento Naviero</h3>
+                </div>
+
+                <div class="servicio-card animar" data-modal="modal-pilotage" style="cursor:pointer;">
+                    <div class="servicio-img-wrap">
+                        <img src="img/pilotage.jpg" alt="Pilotage" class="servicio-img">
+                    </div>
+                    <h3 data-i18n="serv2-titulo">Practicaje y Canal de Magallanes</h3>
+                </div>
+
+                <div class="servicio-card animar" data-modal="modal-inteligencia" style="cursor:pointer;">
+                    <div class="servicio-img-wrap">
+                        <img src="img/market-intelligence.jpg" alt="Market Intelligence" class="servicio-img">
+                    </div>
+                    <h3 data-i18n="serv3-titulo">Inteligencia de Mercado</h3>
+                </div>
+
+                <div class="servicio-card animar" data-modal="modal-owners" style="cursor:pointer;">
+                    <div class="servicio-img-wrap">
+                        <img src="img/owners-matters.jpg" alt="Owners Matters" class="servicio-img">
+                    </div>
+                    <h3 data-i18n="serv4-titulo">Owners Matters</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN NUESTRA PRESENCIA -->
+    <section id="presencia">
+        <div class="contenedor">
+            <div class="seccion-titulo animar">
+                <h2 data-i18n="presencia-titulo">Nuestra Presencia</h2>
+                <div class="linea-decorativa"></div>
+                <p data-i18n="presencia-desc">Operamos en los principales puertos de Chile, Perú, Argentina y Uruguay, brindando soluciones marítimas integrales en el Cono Sur.</p>
+            </div>
+            <div id="mapa-presencia" class="animar">
+                <div class="mapa-img-wrapper">
+                    <img src="MAPA.png" alt="Presencia en Sudamérica" class="mapa-img-base">
+
+                    <div class="marker-img" data-pais="peru" style="left:35.64%;top:54.16%">
+                        <div class="marker-presencia">
+                            <div class="marker-pulse"></div>
+                            <div class="marker-pulse marker-pulse-2"></div>
+                            <div class="marker-dot"><span class="marker-x">✕</span></div>
+                            <div class="marker-label">Perú</div>
+                        </div>
+                    </div>
+
+                    <div class="marker-img" data-pais="chile" style="left:42.23%;top:76.67%">
+                        <div class="marker-presencia">
+                            <div class="marker-pulse"></div>
+                            <div class="marker-pulse marker-pulse-2"></div>
+                            <div class="marker-dot"><span class="marker-x">✕</span></div>
+                            <div class="marker-label">Chile</div>
+                        </div>
+                    </div>
+
+                    <div class="marker-img" data-pais="argentina" style="left:50.02%;top:81.29%">
+                        <div class="marker-presencia">
+                            <div class="marker-pulse"></div>
+                            <div class="marker-pulse marker-pulse-2"></div>
+                            <div class="marker-dot"><span class="marker-x">✕</span></div>
+                            <div class="marker-label">Argentina</div>
+                        </div>
+                    </div>
+
+                    <div class="marker-img" data-pais="uruguay" style="left:51.39%;top:77.98%">
+                        <div class="marker-presencia">
+                            <div class="marker-pulse"></div>
+                            <div class="marker-pulse marker-pulse-2"></div>
+                            <div class="marker-dot"><span class="marker-x">✕</span></div>
+                            <div class="marker-label">Uruguay</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Popup mapa — mismo diseño que modales de servicios -->
+            <div class="modal-overlay" id="popup-mapa-overlay">
+                <div class="modal-caja popup-mapa-caja">
+                    <button class="modal-cerrar" id="popup-mapa-close">✕</button>
+                    <div id="popup-mapa-contenido"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECCIÓN CONTACTO -->
+    <section id="contacto">
+        <div class="contenedor">
+
+            <div class="seccion-titulo animar">
+                <h2 data-i18n="contacto-titulo">Contáctenos</h2>
+                <div class="linea-decorativa"></div>
+                <p data-i18n="contacto-desc">Estamos disponibles para atender sus consultas y brindarle la mejor solución para sus necesidades marítimas.</p>
+            </div>
+
+            <!-- Formulario -->
+            <div class="formulario animar">
+                <h3 data-i18n="form-titulo">Déjenos un Mensaje</h3>
+                <form id="formulario-contacto">
+                    <div class="form-fila">
+                        <div class="form-grupo">
+                            <label for="nombre" data-i18n="form-nombre-label">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" data-i18n-placeholder="form-nombre-ph" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="empresa" data-i18n="form-empresa-label">Empresa</label>
+                            <input type="text" id="empresa" name="empresa" data-i18n-placeholder="form-empresa-ph" placeholder="Nombre de su empresa">
+                        </div>
+                    </div>
+                    <div class="form-fila">
+                        <div class="form-grupo">
+                            <label for="email" data-i18n="form-email-label">Email *</label>
+                            <input type="email" id="email" name="email" data-i18n-placeholder="form-email-ph" placeholder="juan@empresa.com" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="telefono" data-i18n="form-telefono-label">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+                        </div>
+                    </div>
+                    <div class="form-fila">
+                        <div class="form-grupo">
+                            <label for="pais" data-i18n="form-pais-label">País</label>
+                            <select id="pais" name="pais" data-i18n-select="pais"></select>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="servicio" data-i18n="form-servicio-label">Servicio de Interés</label>
+                            <select id="servicio" name="servicio" data-i18n-select="servicio"></select>
+                        </div>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="mensaje" data-i18n="form-mensaje-label">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" data-i18n-placeholder="form-mensaje-ph" placeholder="Cuéntenos sobre su consulta..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primario" style="width:100%;font-size:1rem;padding:16px;" data-i18n="form-btn">
+                        Enviar Mensaje
+                    </button>
+                    <div id="mensaje-exito" class="mensaje-exito" data-i18n="form-exito">
+                        ✓ ¡Mensaje enviado con éxito! Le contactaremos a la brevedad.
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ENCABEZADO HOLDING -->
+    <div class="holding-header">
+        <p class="holding-header__eyebrow" data-i18n="holding_eyebrow">Grupo Empresarial</p>
+        <h2 class="holding-header__title" data-i18n="holding_title">Parte del Grupo B&amp;M</h2>
+        <p class="holding-header__desc" data-i18n="holding_desc">B&amp;M Agencia Marítima integra un grupo de empresas especializadas que operan de forma coordinada para ofrecer soluciones integrales en logística, comercio y servicios marítimos.</p>
+    </div>
+
+    <!-- OLA SEPARADORA -->
+    <div class="holding-ola">
+        <svg viewBox="0 0 2880 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,25 C120,45 240,5 360,25 C480,45 600,5 720,25 C840,45 960,5 1080,25 C1200,45 1320,5 1440,25 C1560,45 1680,5 1800,25 C1920,45 2040,5 2160,25 C2280,45 2400,5 2520,25 C2640,45 2760,5 2880,25" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/>
+        </svg>
+    </div>
+
+    <!-- CARRUSEL HOLDING -->
+    <section class="holding-strip">
+        <div class="holding-track-wrapper">
+            <div class="holding-track">
+                <!-- Set 1 -->
+                <div class="holding-item" data-tip="B&M Business Support">
+                    <img src="Holding/1.png" alt="B&M Business Support" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Fruzty">
+                    <img src="Holding/2.png" alt="Fruzty" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Agencia MIH">
+                    <img src="Holding/3.png" alt="Agencia MIH" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="BM Logistics">
+                    <img src="Holding/4.png" alt="BM Logistics" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Inversiones Ostro">
+                    <img src="Holding/5.png" alt="Inversiones Ostro" class="holding-logo holding-logo--grande">
+                </div>
+                <div class="holding-item" data-tip="Servicios Marítimos Portuarios">
+                    <img src="Holding/6.png" alt="Servicios Marítimos Portuarios" class="holding-logo">
+                </div>
+                <!-- Set 2 -->
+                <div class="holding-item" data-tip="B&M Business Support" aria-hidden="true">
+                    <img src="Holding/1.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Fruzty" aria-hidden="true">
+                    <img src="Holding/2.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Agencia MIH" aria-hidden="true">
+                    <img src="Holding/3.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="BM Logistics" aria-hidden="true">
+                    <img src="Holding/4.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Inversiones Ostro" aria-hidden="true">
+                    <img src="Holding/5.png" alt="" class="holding-logo holding-logo--grande">
+                </div>
+                <div class="holding-item" data-tip="Servicios Marítimos Portuarios" aria-hidden="true">
+                    <img src="Holding/6.png" alt="" class="holding-logo">
+                </div>
+                <!-- Set 3 -->
+                <div class="holding-item" data-tip="B&M Business Support" aria-hidden="true">
+                    <img src="Holding/1.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Fruzty" aria-hidden="true">
+                    <img src="Holding/2.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Agencia MIH" aria-hidden="true">
+                    <img src="Holding/3.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="BM Logistics" aria-hidden="true">
+                    <img src="Holding/4.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Inversiones Ostro" aria-hidden="true">
+                    <img src="Holding/5.png" alt="" class="holding-logo holding-logo--grande">
+                </div>
+                <div class="holding-item" data-tip="Servicios Marítimos Portuarios" aria-hidden="true">
+                    <img src="Holding/6.png" alt="" class="holding-logo">
+                </div>
+                <!-- Set 4 -->
+                <div class="holding-item" data-tip="B&M Business Support" aria-hidden="true">
+                    <img src="Holding/1.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Fruzty" aria-hidden="true">
+                    <img src="Holding/2.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Agencia MIH" aria-hidden="true">
+                    <img src="Holding/3.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="BM Logistics" aria-hidden="true">
+                    <img src="Holding/4.png" alt="" class="holding-logo">
+                </div>
+                <div class="holding-item" data-tip="Inversiones Ostro" aria-hidden="true">
+                    <img src="Holding/5.png" alt="" class="holding-logo holding-logo--grande">
+                </div>
+                <div class="holding-item" data-tip="Servicios Marítimos Portuarios" aria-hidden="true">
+                    <img src="Holding/6.png" alt="" class="holding-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+
+            <div class="footer-seccion">
+                <a href="#inicio"><img src="LOGO.png" alt="B&M Agencia Marítima" class="footer-logo-img"></a>
+                <p class="footer-descripcion" data-i18n="footer-desc">Empresa independiente especializada en servicios marítimos integrales, operando en puertos de Chile, Perú y Argentina desde 1997.</p>
+                <div class="footer-redes">
+                    <a href="https://www.linkedin.com/" target="_blank" class="footer-red" title="LinkedIn">in</a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer-red" title="Instagram">ig</a>
+                </div>
+            </div>
+
+            <div class="footer-seccion">
+                <h4 data-i18n="footer-nav-titulo">Navegación</h4>
+                <ul>
+                    <li><a href="#inicio"    data-i18n="nav-inicio">Inicio</a></li>
+                    <li><a href="#nosotros"  data-i18n="nav-nosotros">Nosotros</a></li>
+                    <li><a href="#servicios" data-i18n="nav-servicios">Servicios</a></li>
+                    <li><a href="#contacto"  data-i18n="nav-contacto">Contacto</a></li>
+                    <li><a href="#" data-i18n="nav-equipo" onclick="event.preventDefault();abrirModal('modal-equipo')">Equipo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-seccion">
+                <h4 data-i18n="footer-serv-titulo">Servicios</h4>
+                <ul>
+                    <li><a href="#servicios" data-i18n="serv1-titulo">Agenciamiento Naviero</a></li>
+                    <li><a href="#servicios" data-i18n="serv2-titulo">Practicaje y Canal de Magallanes</a></li>
+                    <li><a href="#servicios" data-i18n="serv3-titulo">Inteligencia de Mercado</a></li>
+                    <li><a href="#servicios" data-i18n="serv4-titulo">Owners Matters</a></li>
+                    <li><a href="#servicios" data-i18n="serv5-titulo">Gestión Aduanera</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna Santiago -->
+            <div class="footer-seccion footer-col-pais">
+                <h4 class="footer-col-pais-titulo"><span class="fi fi-cl"></span> Santiago</h4>
+                <button class="footer-col-link" data-modal="modal-sucursal-santiago">Ver directorio →</button>
+            </div>
+
+            <!-- Columna Perú -->
+            <div class="footer-seccion footer-col-pais">
+                <h4 class="footer-col-pais-titulo"><span class="fi fi-pe"></span> Perú</h4>
+                <button class="footer-col-link" data-modal="modal-sucursal-peru">Ver directorio →</button>
+                <hr class="footer-col-divider">
+                <a href="https://bmmaritima.com/wp-content/uploads/2024/05/POLITICA-DE-SEGURIDAD-BASC-BM-version-00.pdf" target="_blank" rel="noopener" class="footer-col-link">📄 Políticas SGCS - BASC</a>
+                <a href="https://bmmaritima.com/wp-content/uploads/2024/05/POL-GEG-01_Politica-del-SIG_V02.pdf" target="_blank" rel="noopener" class="footer-col-link">📄 Políticas SIG</a>
+                <a href="https://authorize.vuce.gob.pe/public/login-options/mincetur-mislo" target="_blank" rel="noopener" class="footer-col-link">🔗 Tarifas Locales</a>
+                <button class="footer-col-link" data-modal="modal-reclamaciones-peru">📝 Reclamaciones y Quejas</button>
+                <a href="https://bmmaritima.com/wp-content/uploads/2025/05/TARIFAS-CON-TIEMPO-PROM.-DE-SERVICIO.pdf" target="_blank" rel="noopener" class="footer-col-link">📄 Tarifas con Tiempo Promedio</a>
+            </div>
+
+            <!-- Columna Argentina -->
+            <div class="footer-seccion footer-col-pais">
+                <h4 class="footer-col-pais-titulo"><span class="fi fi-ar"></span> Argentina</h4>
+                <button class="footer-col-link" data-modal="modal-sucursal-argentina">Ver directorio →</button>
+            </div>
+
+            <!-- Columna Uruguay -->
+            <div class="footer-seccion footer-col-pais">
+                <h4 class="footer-col-pais-titulo"><span class="fi fi-uy"></span> Uruguay</h4>
+                <button class="footer-col-link" data-modal="modal-sucursal-uruguay">Ver directorio →</button>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom" style="justify-content:center;">
+            <span data-i18n="footer-copy">© 2026 B&M Agencia Marítima S.A. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
+    <!-- POPUP / MODAL - Mapa de ubicación -->
+    <div id="modal-mapa" class="modal-overlay">
+        <div class="modal-caja modal-caja-mapa">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <div class="modal-icono">📍</div>
+            <h3 class="modal-titulo">Oficina Central Santiago de Chile</h3>
+            <div class="modal-linea"></div>
+            <p class="modal-direccion">Rosario Norte 100 — Las Condes, Santiago</p>
+            <div id="mapa-leaflet"></div>
+        </div>
+    </div>
+
+    <!-- POPUP / MODAL - Pilotaje / Magellan -->
+    <div id="modal-pilotage" class="modal-overlay">
+        <div class="modal-caja modal-caja-ancha">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <h3 class="modal-titulo" data-i18n="modal2-titulo">Magellan, Channel &amp; Port Pilotage</h3>
+            <div class="modal-linea"></div>
+            <div class="modal-contenido-img">
+                <div class="modal-col-texto">
+                    <p class="modal-texto" data-i18n="modal2-texto">
+                        Para los buques que navegan por los canales australes de Chile y el Estrecho de Magallanes, que realizan maniobras en diversos puertos de Perú o que navegan por ríos en Argentina, estamos a su entera disposición para gestionar de manera oportuna y eficiente los servicios de practicaje necesarios. Consúltenos sobre los costos y los distintos requisitos conforme a la normativa vigente. ¡Somos expertos y estaremos encantados de ayudarle!
+                    </p>
+                    <div class="modal-leyendas">
+                        <div class="modal-leyenda">
+                            <span class="leyenda-color" style="background:#2563a8;"></span>
+                            <span data-i18n="modal2-leyenda-azul"><strong>Azul:</strong> obligatorio para todos los buques.</span>
+                        </div>
+                        <div class="modal-leyenda">
+                            <span class="leyenda-color" style="background:#dc2626;"></span>
+                            <span data-i18n="modal2-leyenda-rojo"><strong>Rojo:</strong> obligatorio para todos los buques que hacen escala en puertos chilenos.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-col-imagen">
+                    <img src="img/mapa-magellan.png" alt="Mapa Magellan" class="modal-mapa">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP / MODAL - Agenciamiento Naviero -->
+    <div id="modal-agenciamiento" class="modal-overlay">
+        <div class="modal-caja modal-caja-ancha">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <h3 class="modal-titulo" data-i18n="modal1-titulo">Agenciamiento Naviero</h3>
+            <div class="modal-linea"></div>
+            <p class="modal-texto" data-i18n="modal1-texto">
+                B&M gestiona un amplio volumen de escalas portuarias en Sudamérica. Actuamos como agentes portuarios para todo tipo de buques —desde graneleros convencionales hasta petroleros— y gestionamos escalas especializadas, tales como operaciones de <em>bunkering</em> y cargas de proyectos, entre otras. Asimismo, prestamos servicios de agencia de protección (<em>protective agency</em>) siempre que nuestros clientes lo requieren. Independientemente del servicio que llevemos a cabo, nuestra prioridad es la eficiencia de costes, la agilidad en la operativa y la protección constante de los intereses de nuestros clientes.
+            </p>
+        </div>
+    </div>
+
+    <!-- POPUP / MODAL - Owners Matters -->
+    <div id="modal-owners" class="modal-overlay">
+        <div class="modal-caja modal-caja-ancha">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <h3 class="modal-titulo" data-i18n="modal4-titulo">Owners Matters</h3>
+            <div class="modal-linea"></div>
+            <p class="modal-texto" data-i18n="modal4-p1">Nuestra área de Servicios para Armadores ofrece una atención integral, orientada a satisfacer los requerimientos de las embarcaciones y sus tripulaciones.</p>
+            <p class="modal-texto" data-i18n="modal4-p2">Entre nuestros principales servicios se incluyen:</p>
+            <ul class="modal-lista">
+                <li data-i18n="modal4-li1">Gestión de traslados de tripulantes, visitantes y técnicos: trámites migratorios, pasajes aéreos, asistencia en aeropuertos, reservas de hoteles y coordinación de transporte, entre otros.</li>
+                <li data-i18n="modal4-li2">Asistencia médica para los miembros de la tripulación.</li>
+                <li data-i18n="modal4-li3">Gestión logística de repuestos enviados por vía aérea o marítima, desde o hacia Chile, incluyendo consolidación y desconsolidación de contenedores.</li>
+                <li data-i18n="modal4-li4">Servicios de mensajería y coordinación logística para la entrega de provisiones a bordo.</li>
+                <li data-i18n="modal4-li5">Entrega de efectivo al capitán (Cash to Master).</li>
+                <li data-i18n="modal4-li6">Suministro de cartas náuticas del Almirantazgo Británico (BA) o locales, publicaciones marítimas, avisos a los navegantes (NTM), banderas y otros elementos requeridos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- POPUP / MODAL - Inteligencia de Mercado -->
+    <div id="modal-inteligencia" class="modal-overlay">
+        <div class="modal-caja modal-caja-ancha">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <h3 class="modal-titulo" data-i18n="modal3-titulo">Inteligencia de Mercado</h3>
+            <div class="modal-linea"></div>
+            <p class="modal-texto" data-i18n="modal3-p1">Entendemos que el mercado de fletamentos opera en un entorno altamente competitivo, donde disponer de información precisa y oportuna marca la diferencia al momento de concretar nuevos negocios.</p>
+            <p class="modal-texto" data-i18n="modal3-p2">Por esta razón, creamos nuestra área de Prefijación, enfocada en entregar —en menos de una hora— toda la información relevante para la toma de decisiones, incluyendo costos portuarios, condiciones operativas, restricciones y requisitos. Así, nuestros clientes pueden negociar desde una posición privilegiada.</p>
+            <p class="modal-texto" data-i18n="modal3-p3">Sin embargo, sabemos que los costos y las restricciones son solo una parte del proceso. Por ello, contamos con un dinámico equipo comercial dedicado a recopilar, analizar y compartir información estratégica del sector. Nuestra inteligencia de mercado incluye informes personalizados, programación de naves en puerto y seguimiento permanente de los temas relevantes para cada cliente.</p>
+        </div>
+    </div>
+
+    <!-- MODALES SUCURSALES -->
+
+    <!-- Santiago -->
+    <div id="modal-sucursal-santiago" class="modal-overlay">
+        <div class="modal-caja sucursal-caja">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <div class="modal-icono">🇨🇱</div>
+            <h3 class="modal-titulo">Santiago, Chile</h3>
+            <div class="modal-linea"></div>
+            <div class="sucursal-scroll">
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Rolando Horzella</div>
+                        <div class="sucursal-cargo">Gerente Agencia BM, Chile</div>
+                        <div class="sucursal-dato">📱 +56 9 9229 1719</div>
+                        <div class="sucursal-dato">✉ Rolando.horzella@bm-maritima.cl</div>
+                    </div>
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Gonzalo Fernández</div>
+                        <div class="sucursal-cargo">Director de Relaciones Corporativas</div>
+                        <div class="sucursal-dato">📱 +56 9 9231 2933</div>
+                        <div class="sucursal-dato">✉ gfernandez@bm-maritima.cl</div>
+                    </div>
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Martina Kassu</div>
+                        <div class="sucursal-cargo">Head of Prefixture Strategic Support</div>
+                        <div class="sucursal-dato">📱 +56 9 474 205 41</div>
+                        <div class="sucursal-dato">✉ prefixture@bm-maritima.cl</div>
+                    </div>
+                </div>
+
+                <div class="sucursal-dept-titulo">Operations Department</div>
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Bulkers</div>
+                        <div class="sucursal-nombre">Francisco Muñoz</div>
+                        <div class="sucursal-cargo">Head of Bulkers Desk</div>
+                        <div class="sucursal-dato">📱 +56 9 7432 2938</div>
+                        <div class="sucursal-dato">✉ bulkers@bm-maritima.cl</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Tankers</div>
+                        <div class="sucursal-nombre">Miguel Prado</div>
+                        <div class="sucursal-cargo">Head of Tankers Desk</div>
+                        <div class="sucursal-dato">📱 +569 7160 4479</div>
+                        <div class="sucursal-dato">✉ Tankers@bm-maritima.cl</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Total Vessel Support</div>
+                        <div class="sucursal-nombre">Alex López</div>
+                        <div class="sucursal-cargo">Head of TVS Desk</div>
+                        <div class="sucursal-dato">📱 +56 9 9807 2075</div>
+                        <div class="sucursal-dato">✉ tvs@bm-maritima.cl</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Documental</div>
+                        <div class="sucursal-nombre">John Cáceres</div>
+                        <div class="sucursal-cargo">Documental</div>
+                        <div class="sucursal-dato">📱 +56 9 9908 0743</div>
+                        <div class="sucursal-dato">✉ cargodocs@bm-maritima.cl</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Perú -->
+    <div id="modal-sucursal-peru" class="modal-overlay">
+        <div class="modal-caja sucursal-caja">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <div class="modal-icono">🇵🇪</div>
+            <h3 class="modal-titulo">Lima, Perú</h3>
+            <div class="modal-linea"></div>
+            <div class="sucursal-scroll">
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">EMPRESA MARITIMA B &amp; M S.A.C.</div>
+                        <div class="sucursal-dato">📍 Calle Chinchón 1018, Piso 14</div>
+                        <div class="sucursal-dato">&nbsp;&nbsp;&nbsp;&nbsp;San Isidro – Perú</div>
+                        <div class="sucursal-dato">📞 +51 1 2215052</div>
+                        <div class="sucursal-dato">✉ peru@bm-maritima.pe</div>
+                        <div class="sucursal-dato">🌐 www.bmmaritima.com</div>
+                    </div>
+                </div>
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Carlos García J.</div>
+                        <div class="sucursal-cargo">Operations Manager</div>
+                        <div class="sucursal-dato">📱 +51 944 899 844</div>
+                        <div class="sucursal-dato">✉ Carlos.Garcia@bm-maritima.pe</div>
+                    </div>
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Gaby Guzmán H.</div>
+                        <div class="sucursal-cargo">Operations Chief</div>
+                        <div class="sucursal-dato">📱 +51 978 215 494</div>
+                        <div class="sucursal-dato">✉ Gaby.Guzman@bm-maritima.pe</div>
+                    </div>
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">José López L.</div>
+                        <div class="sucursal-cargo">Prefixture</div>
+                        <div class="sucursal-dato">📱 +51 963 963 831</div>
+                        <div class="sucursal-dato">✉ prefixture@bm-maritima.pe</div>
+                        <div class="sucursal-dato">✉ Jose.Lopez@bm-maritima.pe</div>
+                    </div>
+                </div>
+
+                <div class="sucursal-dept-titulo">Operations Department</div>
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Bulkers Desk</div>
+                        <div class="sucursal-nombre">Gaby Guzmán H.</div>
+                        <div class="sucursal-dato">📱 +51 978 215 494</div>
+                        <div class="sucursal-dato">✉ Gaby.Guzman@bm-maritima.pe</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Tankers Desk</div>
+                        <div class="sucursal-dato">✉ tankers@bm-maritima.pe</div>
+                        <div class="sucursal-nombre">Stephanie Arroyo R.</div>
+                        <div class="sucursal-dato">📱 +51 975 647 912</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Reefers Desk</div>
+                        <div class="sucursal-dato">✉ reefers@bm-maritima.pe</div>
+                        <div class="sucursal-nombre">Juan Garrido T.</div>
+                        <div class="sucursal-dato">📱 +51 988 751 485</div>
+                        <div class="sucursal-nombre">Alexandra Zela</div>
+                        <div class="sucursal-dato">📱 +51 997 693 172</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Husbandry Desk</div>
+                        <div class="sucursal-dato">✉ husbandry@bm-maritima.pe</div>
+                        <div class="sucursal-nombre">Walter Contreras O.</div>
+                        <div class="sucursal-dato">📱 +51 951 829 131</div>
+                        <div class="sucursal-nombre">Ginna Fiestas V.</div>
+                        <div class="sucursal-dato">📱 +51 954 157 015</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Reclamaciones Perú -->
+    <div id="modal-reclamaciones-peru" class="modal-overlay">
+        <div class="modal-caja sucursal-caja">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <div class="modal-icono">📝</div>
+            <h3 class="modal-titulo">Reclamaciones y Quejas — Perú</h3>
+            <div class="modal-linea"></div>
+            <div class="sucursal-scroll">
+                <form class="modal-form" id="form-reclamaciones-peru">
+                    <div class="modal-form-fila">
+                        <div class="modal-form-grupo">
+                            <label>Nombre completo *</label>
+                            <input type="text" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="modal-form-grupo">
+                            <label>Empresa / Nave</label>
+                            <input type="text" placeholder="Nombre de la empresa o nave">
+                        </div>
+                    </div>
+                    <div class="modal-form-fila">
+                        <div class="modal-form-grupo">
+                            <label>Correo electrónico *</label>
+                            <input type="email" placeholder="correo@empresa.com" required>
+                        </div>
+                        <div class="modal-form-grupo">
+                            <label>Teléfono</label>
+                            <input type="tel" placeholder="+51 9 XXXX XXXX">
+                        </div>
+                    </div>
+                    <div class="modal-form-grupo">
+                        <label>Tipo de reclamación *</label>
+                        <select required>
+                            <option value="">Seleccione una opción...</option>
+                            <option>Demora en el servicio</option>
+                            <option>Error en documentación</option>
+                            <option>Atención al cliente</option>
+                            <option>Daño a carga o nave</option>
+                            <option>Facturación / Tarifas</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="modal-form-fila">
+                        <div class="modal-form-grupo">
+                            <label>Fecha del incidente</label>
+                            <input type="date">
+                        </div>
+                        <div class="modal-form-grupo">
+                            <label>Puerto / Sede</label>
+                            <input type="text" placeholder="Ej: Callao, Paita...">
+                        </div>
+                    </div>
+                    <div class="modal-form-grupo">
+                        <label>Descripción detallada *</label>
+                        <textarea rows="4" placeholder="Describa su reclamación o queja con el mayor detalle posible..." required></textarea>
+                    </div>
+                    <button type="submit" class="modal-form-submit">Enviar Reclamación</button>
+                    <div class="modal-form-exito" id="reclamacion-exito" style="display:none;">
+                        ✅ Su reclamación ha sido enviada. Nos comunicaremos a la brevedad.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Argentina -->
+    <div id="modal-sucursal-argentina" class="modal-overlay">
+        <div class="modal-caja sucursal-caja">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <div class="modal-icono">🇦🇷</div>
+            <h3 class="modal-titulo">Argentina</h3>
+            <div class="modal-linea"></div>
+            <div class="sucursal-scroll">
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Carl Lessau</div>
+                        <div class="sucursal-cargo">Country Manager</div>
+                        <div class="sucursal-dato">📱 +56-9 6194-9614</div>
+                        <div class="sucursal-dato">✉ carl.lessau@bm-maritima.cl</div>
+                    </div>
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Cesar Fernández Biscay</div>
+                        <div class="sucursal-cargo">Project Manager</div>
+                        <div class="sucursal-dato">📱 11 3249-1769</div>
+                        <div class="sucursal-dato">✉ cesar.fernandez.biscay@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Joaquín Pérez</div>
+                        <div class="sucursal-cargo">Commercial Manager</div>
+                        <div class="sucursal-dato">📱 11 2481-1064</div>
+                        <div class="sucursal-dato">✉ joaquin.perez@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Norberto López</div>
+                        <div class="sucursal-cargo">Operations Manager</div>
+                        <div class="sucursal-dato">📱 11 5182-1280</div>
+                        <div class="sucursal-dato">✉ norberto.lopez@bm-maritima.com.ar</div>
+                    </div>
+                </div>
+
+                <div class="sucursal-dept-titulo">Ship Operators</div>
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Victor Fraga</div>
+                        <div class="sucursal-cargo">Ship Operator</div>
+                        <div class="sucursal-dato">📱 34 1506-5012</div>
+                        <div class="sucursal-dato">✉ victor.fraga@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Ariel Martinoli</div>
+                        <div class="sucursal-cargo">Ship Operator</div>
+                        <div class="sucursal-dato">📱 11 6433-8151</div>
+                        <div class="sucursal-dato">✉ ariel.martinoli@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Jorge Pedrozo</div>
+                        <div class="sucursal-cargo">Documentation Analyst</div>
+                        <div class="sucursal-dato">📱 11 6433-6491</div>
+                        <div class="sucursal-dato">✉ jorge.pedrozo@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Martín Carballo</div>
+                        <div class="sucursal-cargo">Ship Operator (Husbandry)</div>
+                        <div class="sucursal-dato">📱 11 6473 1186</div>
+                        <div class="sucursal-dato">✉ martin.carballo@bm-maritima.com.ar</div>
+                        <div class="sucursal-dato">✉ husbandry@bm-maritima.com.ar</div>
+                    </div>
+                </div>
+
+                <!-- Oficina Campana -->
+                <div class="sucursal-dept-titulo">📍 Av. Ing. A. Rocca 189 — Campana / Zárate</div>
+                <div class="sucursal-bloque">
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Oficina General</div>
+                        <div class="sucursal-dato">✉ campana@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Germán Espido</div>
+                        <div class="sucursal-cargo">Agency Chief / Boarding Agent</div>
+                        <div class="sucursal-dato">📱 3489 35-4466</div>
+                        <div class="sucursal-dato">✉ german.espido@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Ariel Martinoli</div>
+                        <div class="sucursal-cargo">Ship Operator</div>
+                        <div class="sucursal-dato">📱 11 6433-8151</div>
+                        <div class="sucursal-dato">✉ ariel.martinoli@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Tomás Nevoran</div>
+                        <div class="sucursal-cargo">Ship Operator</div>
+                        <div class="sucursal-dato">📱 11 3294-7793</div>
+                        <div class="sucursal-dato">✉ tomas.nevoran@bm-maritima.com.ar</div>
+                    </div>
+                </div>
+
+                <!-- Oficina San Lorenzo -->
+                <div class="sucursal-dept-titulo">📍 Bv. Urquiza 454 — San Lorenzo / San Martín / Rosario</div>
+                <div class="sucursal-bloque">
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Oficina General</div>
+                        <div class="sucursal-dato">✉ sanlorenzo@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Victor Fraga</div>
+                        <div class="sucursal-cargo">Agency Chief / Boarding Agent</div>
+                        <div class="sucursal-dato">📱 34 1506-5012</div>
+                        <div class="sucursal-dato">✉ victor.fraga@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Jose Polenta</div>
+                        <div class="sucursal-cargo">Ship Operator</div>
+                        <div class="sucursal-dato">📱 11 5121-3815</div>
+                        <div class="sucursal-dato">✉ jose.polenta@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Clara Calogeropulos</div>
+                        <div class="sucursal-cargo">Operations Assistant</div>
+                        <div class="sucursal-dato">📱 11 7845-9802</div>
+                        <div class="sucursal-dato">✉ clara.calogeropulos@bm-maritima.com.ar</div>
+                    </div>
+                </div>
+
+                <!-- Oficina Bahía Blanca -->
+                <div class="sucursal-dept-titulo">📍 Alvarado 38, Piso 5, Suite 1 — Bahía Blanca</div>
+                <div class="sucursal-bloque">
+                    <div class="sucursal-desk">
+                        <div class="sucursal-desk-nombre">Oficina General</div>
+                        <div class="sucursal-dato">✉ bahiablanca@bm-maritima.com.ar</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Gonzalo Mellado</div>
+                        <div class="sucursal-cargo">Ship Operator</div>
+                        <div class="sucursal-dato">📱 291 404-2250</div>
+                        <div class="sucursal-dato">✉ bahiablanca@bm-maritima.com.ar</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Uruguay -->
+    <div id="modal-sucursal-uruguay" class="modal-overlay">
+        <div class="modal-caja sucursal-caja">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <div class="modal-icono">🇺🇾</div>
+            <h3 class="modal-titulo">Uruguay</h3>
+            <div class="modal-linea"></div>
+            <div class="sucursal-scroll">
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-persona">
+                        <div class="sucursal-nombre">Carl Lessau</div>
+                        <div class="sucursal-cargo">Country Manager</div>
+                        <div class="sucursal-dato">📱 +56 9 6194 9614</div>
+                        <div class="sucursal-dato">✉ carl.lessau@bm-maritima.cl</div>
+                    </div>
+                </div>
+
+                <div class="sucursal-dept-titulo">Operations</div>
+
+                <div class="sucursal-bloque">
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Thiago Loustalet</div>
+                        <div class="sucursal-dato">📱 +598 99 817 608</div>
+                        <div class="sucursal-dato">✉ operations@bm-maritima.uy</div>
+                    </div>
+                    <div class="sucursal-desk">
+                        <div class="sucursal-nombre">Carmen Costa</div>
+                        <div class="sucursal-dato">📱 +598 99 818 722</div>
+                        <div class="sucursal-dato">✉ operations@bm-maritima.uy</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL EQUIPO -->
+    <div id="modal-equipo" class="modal-overlay">
+        <div class="modal-caja equipo-caja">
+            <button class="modal-cerrar" aria-label="Cerrar">✕</button>
+            <h3 class="modal-titulo" data-i18n="equipo-titulo">Nuestro Equipo</h3>
+            <div class="modal-linea"></div>
+            <p class="equipo-intro" data-i18n="equipo-intro">En B&amp;M creemos que contar con un equipo apasionado por lo que hace es lo que marca la diferencia en el servicio que entregamos. Estamos disponibles 24/7.</p>
+            <div class="equipo-scroll">
+
+                <!-- CHILE -->
+                <div class="equipo-pais-seccion">
+                    <div class="equipo-pais-header">Chile 🇨🇱</div>
+                    <div class="equipo-personas-grid">
+                        <!-- Ansgar Müschen -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/ansgar.jpg" class="equipo-foto" alt="Ansgar Müschen"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">AM</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Ansgar Müschen</div>
+                                <div class="equipo-cargo">Managing Director</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56992339393" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 9233 9393</a>
+                                    <a href="mailto:commercial@bm-maritima.cl" class="equipo-mail-link">✉ commercial@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Rolando Horzella -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/rolando.jpg" class="equipo-foto" alt="Rolando Horzella"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">RH</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Rolando Horzella</div>
+                                <div class="equipo-cargo">Gerente Agencia BM, Chile</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56992291719" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 9229 1719</a>
+                                    <a href="mailto:Rolando.horzella@bm-maritima.cl" class="equipo-mail-link">✉ Rolando.horzella@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gonzalo Fernández -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/gonzalo.jpg" class="equipo-foto" alt="Gonzalo Fernández"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">GF</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Gonzalo Fernández</div>
+                                <div class="equipo-cargo">Director de Relaciones Corporativas</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56992312933" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 9231 2933</a>
+                                    <a href="mailto:gfernandez@bm-maritima.cl" class="equipo-mail-link">✉ gfernandez@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Martina Kassu -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/martina.jpg" class="equipo-foto" alt="Martina Kassu"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">MK</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Martina Kassu</div>
+                                <div class="equipo-cargo">Head of Prefixture Strategic Support</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56947420541" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 4742 0541</a>
+                                    <a href="mailto:prefixture@bm-maritima.cl" class="equipo-mail-link">✉ prefixture@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="equipo-dept-titulo">Operations Department</div>
+                    <div class="equipo-personas-grid">
+                        <!-- Francisco Muñoz — Bulkers -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/francisco.jpg" class="equipo-foto" alt="Francisco Muñoz"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">FM</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Francisco Muñoz</div>
+                                <div class="equipo-cargo">Head of Bulkers Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56974322938" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 7432 2938</a>
+                                    <a href="mailto:bulkers@bm-maritima.cl" class="equipo-mail-link">✉ bulkers@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Miguel Prado — Tankers -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/miguel.jpg" class="equipo-foto" alt="Miguel Prado"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">MP</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Miguel Prado</div>
+                                <div class="equipo-cargo">Head of Tankers Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56971604479" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 7160 4479</a>
+                                    <a href="mailto:Tankers@bm-maritima.cl" class="equipo-mail-link">✉ Tankers@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Alex López — TVS -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/alex.jpg" class="equipo-foto" alt="Alex López"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">AL</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Alex López</div>
+                                <div class="equipo-cargo">Head of TVS Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56998072075" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 9807 2075</a>
+                                    <a href="mailto:tvs@bm-maritima.cl" class="equipo-mail-link">✉ tvs@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- John Cáceres — Documental -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/john.jpg" class="equipo-foto" alt="John Cáceres"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">JC</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">John Cáceres</div>
+                                <div class="equipo-cargo">Documental</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56999080743" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 9908 0743</a>
+                                    <a href="mailto:cargodocs@bm-maritima.cl" class="equipo-mail-link">✉ cargodocs@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARGENTINA -->
+                <div class="equipo-pais-seccion">
+                    <div class="equipo-pais-header">Argentina 🇦🇷</div>
+                    <div class="equipo-personas-grid">
+                        <!-- Carl Lessau -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/carl.jpg" class="equipo-foto" alt="Carl Lessau"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">CL</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Carl Lessau</div>
+                                <div class="equipo-cargo">Country Manager</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56961949614" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 6194 9614</a>
+                                    <a href="mailto:carl.lessau@bm-maritima.cl" class="equipo-mail-link">✉ carl.lessau@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cesar Fernández Biscay -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/cesar.jpg" class="equipo-foto" alt="Cesar Fernández Biscay"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">CF</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Cesar Fernández Biscay</div>
+                                <div class="equipo-cargo">Project Manager</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/541132491769" class="equipo-wa-link" target="_blank" rel="noopener">📱 +54 11 3249-1769</a>
+                                    <a href="mailto:cesar.fernandez.biscay@bm-maritima.com.ar" class="equipo-mail-link">✉ cesar.fernandez.biscay@bm-maritima.com.ar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Joaquín Pérez -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/joaquin.jpg" class="equipo-foto" alt="Joaquín Pérez"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">JP</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Joaquín Pérez</div>
+                                <div class="equipo-cargo">Commercial Manager</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/541124811064" class="equipo-wa-link" target="_blank" rel="noopener">📱 +54 11 2481-1064</a>
+                                    <a href="mailto:joaquin.perez@bm-maritima.com.ar" class="equipo-mail-link">✉ joaquin.perez@bm-maritima.com.ar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Norberto López -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/norberto.jpg" class="equipo-foto" alt="Norberto López"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">NL</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Norberto López</div>
+                                <div class="equipo-cargo">Operations Manager</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/541151821280" class="equipo-wa-link" target="_blank" rel="noopener">📱 +54 11 5182-1280</a>
+                                    <a href="mailto:norberto.lopez@bm-maritima.com.ar" class="equipo-mail-link">✉ norberto.lopez@bm-maritima.com.ar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- URUGUAY -->
+                <div class="equipo-pais-seccion">
+                    <div class="equipo-pais-header">Uruguay 🇺🇾</div>
+                    <div class="equipo-personas-grid">
+                        <!-- Carl Lessau -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/carl.jpg" class="equipo-foto" alt="Carl Lessau"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">CL</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Carl Lessau</div>
+                                <div class="equipo-cargo">Country Manager</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/56961949614" class="equipo-wa-link" target="_blank" rel="noopener">📱 +56 9 6194 9614</a>
+                                    <a href="mailto:carl.lessau@bm-maritima.cl" class="equipo-mail-link">✉ carl.lessau@bm-maritima.cl</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="equipo-dept-titulo">Operations</div>
+                    <div class="equipo-personas-grid">
+                        <!-- Thiago Loustalet -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/thiago.jpg" class="equipo-foto" alt="Thiago Loustalet"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">TL</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Thiago Loustalet</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/59899817608" class="equipo-wa-link" target="_blank" rel="noopener">📱 +598 99 817 608</a>
+                                    <a href="mailto:operations@bm-maritima.uy" class="equipo-mail-link">✉ operations@bm-maritima.uy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carmen Costa -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/carmen.jpg" class="equipo-foto" alt="Carmen Costa"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">CC</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Carmen Costa</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/59899818722" class="equipo-wa-link" target="_blank" rel="noopener">📱 +598 99 818 722</a>
+                                    <a href="mailto:operations@bm-maritima.uy" class="equipo-mail-link">✉ operations@bm-maritima.uy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERU -->
+                <div class="equipo-pais-seccion">
+                    <div class="equipo-pais-header">Perú 🇵🇪</div>
+                    <div class="equipo-personas-grid">
+                        <!-- Carlos García J. -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/carlos.jpg" class="equipo-foto" alt="Carlos García J."
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">CG</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Carlos García J.</div>
+                                <div class="equipo-cargo">Operations Manager</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51944899844" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 944 899 844</a>
+                                    <a href="mailto:Carlos.Garcia@bm-maritima.pe" class="equipo-mail-link">✉ Carlos.Garcia@bm-maritima.pe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Gaby Guzmán H. -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/gaby.jpg" class="equipo-foto" alt="Gaby Guzmán H."
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">GG</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Gaby Guzmán H.</div>
+                                <div class="equipo-cargo">Operations Chief</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51978215494" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 978 215 494</a>
+                                    <a href="mailto:Gaby.Guzman@bm-maritima.pe" class="equipo-mail-link">✉ Gaby.Guzman@bm-maritima.pe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- José López L. -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/jose.jpg" class="equipo-foto" alt="José López L."
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">JL</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">José López L.</div>
+                                <div class="equipo-cargo">Prefixture</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51963963831" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 963 963 831</a>
+                                    <a href="mailto:prefixture@bm-maritima.pe" class="equipo-mail-link">✉ prefixture@bm-maritima.pe</a>
+                                    <a href="mailto:Jose.Lopez@bm-maritima.pe" class="equipo-mail-link">✉ Jose.Lopez@bm-maritima.pe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="equipo-dept-titulo">Operations Department</div>
+                    <div class="equipo-personas-grid">
+                        <!-- Gaby Guzmán — Bulkers Desk -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/gaby.jpg" class="equipo-foto" alt="Gaby Guzmán H."
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">GG</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Gaby Guzmán H.</div>
+                                <div class="equipo-cargo">Bulkers Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51978215494" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 978 215 494</a>
+                                    <a href="mailto:Gaby.Guzman@bm-maritima.pe" class="equipo-mail-link">✉ Gaby.Guzman@bm-maritima.pe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Stephanie Arroyo — Tankers Desk (solo email) -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/stephanie.jpg" class="equipo-foto" alt="Stephanie Arroyo R."
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">SA</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Stephanie Arroyo R.</div>
+                                <div class="equipo-cargo">Tankers Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51975647912" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 975 647 912</a>
+                                    <a href="mailto:tankers@bm-maritima.pe" class="equipo-mail-link">✉ tankers@bm-maritima.pe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Juan Garrido — Reefers Desk -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/juan.jpg" class="equipo-foto" alt="Juan Garrido T."
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">JG</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Juan Garrido T.</div>
+                                <div class="equipo-cargo">Reefers Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51988751485" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 988 751 485</a>
+                                    <a href="mailto:reefers@bm-maritima.pe" class="equipo-mail-link">✉ reefers@bm-maritima.pe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Alexandra Zela — Reefers Desk (solo teléfono) -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/alexandra.jpg" class="equipo-foto" alt="Alexandra Zela"
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">AZ</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Alexandra Zela</div>
+                                <div class="equipo-cargo">Reefers Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51997693172" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 997 693 172</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Walter Contreras — Husbandry Desk -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/walter.jpg" class="equipo-foto" alt="Walter Contreras O."
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">WC</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Walter Contreras O.</div>
+                                <div class="equipo-cargo">Husbandry Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51951829131" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 951 829 131</a>
+                                    <a href="mailto:husbandry@bm-maritima.pe" class="equipo-mail-link">✉ husbandry@bm-maritima.pe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ginna Fiestas — Husbandry Desk (solo teléfono) -->
+                        <div class="equipo-persona-card">
+                            <div class="equipo-foto-container">
+                                <img src="team/ginna.jpg" class="equipo-foto" alt="Ginna Fiestas V."
+                                     onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                <div class="equipo-iniciales">GF</div>
+                            </div>
+                            <div class="equipo-persona-info">
+                                <div class="equipo-nombre">Ginna Fiestas V.</div>
+                                <div class="equipo-cargo">Husbandry Desk</div>
+                                <div class="equipo-contactos">
+                                    <a href="https://wa.me/51954157015" class="equipo-wa-link" target="_blank" rel="noopener">📱 +51 954 157 015</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
