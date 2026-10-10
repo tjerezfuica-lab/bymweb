@@ -24,7 +24,7 @@
         <div class="nav-container">
 
             <a href="#inicio" class="logo">
-                <img src="LOGO_30años.png" alt="B&M Agencia Marítima" class="logo-img">
+                <img src="LOGO.png" alt="B&M Agencia Marítima" class="logo-img">
             </a>
 
             <nav id="nav-principal">
@@ -100,8 +100,8 @@
         </div>
 
         <div class="hero-contenido">
-            <h1 data-i18n="hero-titulo">Soluciones Marítimas de <span>Excelencia</span></h1>
-            <p data-i18n="hero-subtitulo">Líderes en agenciamiento naviero, practicaje y servicios marítimos en Chile, Perú, Argentina y Uruguay. Más de 27 años conectando el mundo por mar.</p>
+            <h1 data-i18n="hero-titulo">Agencia Marítima Servicios con <span>Independencia, Pasión e Innovación</span></h1>
+            <p data-i18n="hero-subtitulo">30 años de liderazgo en agenciamiento marítimo, practicaje y servicios marítimos en Chile, Perú, Argentina y Uruguay.</p>
             <div class="hero-botones">
                 <a href="#servicios" class="btn btn-primario" data-i18n="hero-btn1">Nuestros Servicios</a>
                 <a href="#contacto"  class="btn btn-secundario" data-i18n="hero-btn2">Contáctenos</a>
@@ -131,7 +131,7 @@
     <div class="estadisticas">
         <div class="estadisticas-grid">
             <div class="estadistica-item animar">
-                <span class="estadistica-numero" data-objetivo="27" data-sufijo="+">27+</span>
+                <span class="estadistica-numero" data-objetivo="30" data-sufijo="">30</span>
                 <span class="estadistica-label" data-i18n="stat1-label">Años de Experiencia</span>
             </div>
             <div class="estadistica-item animar">
@@ -277,53 +277,26 @@
                 <div class="linea-decorativa"></div>
                 <p data-i18n="presencia-desc">Operamos en los principales puertos de Chile, Perú, Argentina y Uruguay, brindando soluciones marítimas integrales en el Cono Sur.</p>
             </div>
-            <div id="mapa-presencia" class="animar">
-                <div class="mapa-img-wrapper">
-                    <img src="MAPA.png" alt="Presencia en Sudamérica" class="mapa-img-base">
-
-                    <div class="marker-img" data-pais="peru" style="left:35.64%;top:54.16%">
-                        <div class="marker-presencia">
-                            <div class="marker-pulse"></div>
-                            <div class="marker-pulse marker-pulse-2"></div>
-                            <div class="marker-dot"><span class="marker-x">✕</span></div>
-                            <div class="marker-label">Perú</div>
-                        </div>
-                    </div>
-
-                    <div class="marker-img" data-pais="chile" style="left:42.23%;top:76.67%">
-                        <div class="marker-presencia">
-                            <div class="marker-pulse"></div>
-                            <div class="marker-pulse marker-pulse-2"></div>
-                            <div class="marker-dot"><span class="marker-x">✕</span></div>
-                            <div class="marker-label">Chile</div>
-                        </div>
-                    </div>
-
-                    <div class="marker-img" data-pais="argentina" style="left:50.02%;top:81.29%">
-                        <div class="marker-presencia">
-                            <div class="marker-pulse"></div>
-                            <div class="marker-pulse marker-pulse-2"></div>
-                            <div class="marker-dot"><span class="marker-x">✕</span></div>
-                            <div class="marker-label">Argentina</div>
-                        </div>
-                    </div>
-
-                    <div class="marker-img" data-pais="uruguay" style="left:51.39%;top:77.98%">
-                        <div class="marker-presencia">
-                            <div class="marker-pulse"></div>
-                            <div class="marker-pulse marker-pulse-2"></div>
-                            <div class="marker-dot"><span class="marker-x">✕</span></div>
-                            <div class="marker-label">Uruguay</div>
-                        </div>
-                    </div>
+            <div class="presencia-paises animar">
+                <div class="pais-caja">
+                    <img src="img/Chile.png" alt="Bandera de Chile" class="pais-bandera">
+                    <p class="pais-nombre">Chile</p>
                 </div>
-            </div>
-
-            <!-- Popup mapa — mismo diseño que modales de servicios -->
-            <div class="modal-overlay" id="popup-mapa-overlay">
-                <div class="modal-caja popup-mapa-caja">
-                    <button class="modal-cerrar" id="popup-mapa-close">✕</button>
-                    <div id="popup-mapa-contenido"></div>
+                <div class="pais-caja">
+                    <img src="img/Peru.png" alt="Bandera de Perú" class="pais-bandera">
+                    <p class="pais-nombre">Perú</p>
+                </div>
+                <div class="pais-caja">
+                    <img src="img/Argentina.png" alt="Bandera de Argentina" class="pais-bandera">
+                    <p class="pais-nombre">Argentina</p>
+                </div>
+                <div class="pais-caja">
+                    <img src="img/Uruguay.png" alt="Bandera de Uruguay" class="pais-bandera">
+                    <p class="pais-nombre">Uruguay</p>
+                </div>
+                <div class="pais-caja">
+                    <img src="img/España.png" alt="Bandera de España" class="pais-bandera">
+                    <p class="pais-nombre">España</p>
                 </div>
             </div>
         </div>
@@ -390,104 +363,6 @@
         </div>
     </section>
 
-
-    <!-- ENCABEZADO HOLDING -->
-    <div class="holding-header">
-        <p class="holding-header__eyebrow" data-i18n="holding_eyebrow">Grupo Empresarial</p>
-        <h2 class="holding-header__title" data-i18n="holding_title">Parte del Grupo B&amp;M</h2>
-        <p class="holding-header__desc" data-i18n="holding_desc">B&amp;M Agencia Marítima integra un grupo de empresas especializadas que operan de forma coordinada para ofrecer soluciones integrales en logística, comercio y servicios marítimos.</p>
-    </div>
-
-    <!-- OLA SEPARADORA -->
-    <div class="holding-ola">
-        <svg viewBox="0 0 2880 50" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0,25 C120,45 240,5 360,25 C480,45 600,5 720,25 C840,45 960,5 1080,25 C1200,45 1320,5 1440,25 C1560,45 1680,5 1800,25 C1920,45 2040,5 2160,25 C2280,45 2400,5 2520,25 C2640,45 2760,5 2880,25" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/>
-        </svg>
-    </div>
-
-    <!-- CARRUSEL HOLDING -->
-    <section class="holding-strip">
-        <div class="holding-track-wrapper">
-            <div class="holding-track">
-                <!-- Set 1 -->
-                <div class="holding-item" data-tip="B&M Business Support">
-                    <img src="Holding/1.png" alt="B&M Business Support" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Fruzty">
-                    <img src="Holding/2.png" alt="Fruzty" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Agencia MIH">
-                    <img src="Holding/3.png" alt="Agencia MIH" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="BM Logistics">
-                    <img src="Holding/4.png" alt="BM Logistics" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Inversiones Ostro">
-                    <img src="Holding/5.png" alt="Inversiones Ostro" class="holding-logo holding-logo--grande">
-                </div>
-                <div class="holding-item" data-tip="Servicios Marítimos Portuarios">
-                    <img src="Holding/6.png" alt="Servicios Marítimos Portuarios" class="holding-logo">
-                </div>
-                <!-- Set 2 -->
-                <div class="holding-item" data-tip="B&M Business Support" aria-hidden="true">
-                    <img src="Holding/1.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Fruzty" aria-hidden="true">
-                    <img src="Holding/2.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Agencia MIH" aria-hidden="true">
-                    <img src="Holding/3.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="BM Logistics" aria-hidden="true">
-                    <img src="Holding/4.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Inversiones Ostro" aria-hidden="true">
-                    <img src="Holding/5.png" alt="" class="holding-logo holding-logo--grande">
-                </div>
-                <div class="holding-item" data-tip="Servicios Marítimos Portuarios" aria-hidden="true">
-                    <img src="Holding/6.png" alt="" class="holding-logo">
-                </div>
-                <!-- Set 3 -->
-                <div class="holding-item" data-tip="B&M Business Support" aria-hidden="true">
-                    <img src="Holding/1.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Fruzty" aria-hidden="true">
-                    <img src="Holding/2.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Agencia MIH" aria-hidden="true">
-                    <img src="Holding/3.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="BM Logistics" aria-hidden="true">
-                    <img src="Holding/4.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Inversiones Ostro" aria-hidden="true">
-                    <img src="Holding/5.png" alt="" class="holding-logo holding-logo--grande">
-                </div>
-                <div class="holding-item" data-tip="Servicios Marítimos Portuarios" aria-hidden="true">
-                    <img src="Holding/6.png" alt="" class="holding-logo">
-                </div>
-                <!-- Set 4 -->
-                <div class="holding-item" data-tip="B&M Business Support" aria-hidden="true">
-                    <img src="Holding/1.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Fruzty" aria-hidden="true">
-                    <img src="Holding/2.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Agencia MIH" aria-hidden="true">
-                    <img src="Holding/3.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="BM Logistics" aria-hidden="true">
-                    <img src="Holding/4.png" alt="" class="holding-logo">
-                </div>
-                <div class="holding-item" data-tip="Inversiones Ostro" aria-hidden="true">
-                    <img src="Holding/5.png" alt="" class="holding-logo holding-logo--grande">
-                </div>
-                <div class="holding-item" data-tip="Servicios Marítimos Portuarios" aria-hidden="true">
-                    <img src="Holding/6.png" alt="" class="holding-logo">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FOOTER -->
     <footer>

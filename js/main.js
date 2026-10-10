@@ -13,8 +13,8 @@ const traducciones = {
         'nav-nosotros':     'Nosotros',
         'nav-servicios':    'Servicios',
         'nav-contacto':     'Contacto',
-        'hero-titulo':      'Soluciones Marítimas de <span>Excelencia</span>',
-        'hero-subtitulo':   'Líderes en agenciamiento naviero, practicaje y servicios marítimos en Chile, Perú, Argentina y Uruguay. Tenemos 30 años conectando el mundo por mar.',
+        'hero-titulo':      'Agencia Marítima Servicios con <span>Independencia, Pasión e Innovación</span>',
+        'hero-subtitulo':   '30 años de liderazgo en agenciamiento marítimo, practicaje y servicios marítimos en Chile, Perú, Argentina y Uruguay.',
         'hero-btn1':        'Nuestros Servicios',
         'hero-btn2':        'Contáctenos',
         'stat1-label':      'Años de Experiencia',
@@ -89,9 +89,6 @@ const traducciones = {
         'footer-nav-titulo':    'Navegación',
         'footer-serv-titulo':   'Servicios',
         'footer-contacto-titulo': 'Contacto',
-        'holding_eyebrow':      'Grupo Empresarial',
-        'holding_title':        'Parte del Grupo B&amp;M',
-        'holding_desc':         'B&amp;M Agencia Marítima integra un grupo de empresas especializadas que operan de forma coordinada para ofrecer soluciones integrales en logística, comercio y servicios marítimos.',
         'footer-copy':          '© 2026 B&M Agencia Marítima S.A. Todos los derechos reservados.',
         'footer-design':        'Diseño web profesional',
         'nav-equipo':           'Equipo',
@@ -142,8 +139,8 @@ const traducciones = {
         'nav-nosotros':     'About',
         'nav-servicios':    'Services',
         'nav-contacto':     'Contact',
-        'hero-titulo':      'Maritime Solutions of <span>Excellence</span>',
-        'hero-subtitulo':   'Leaders in ship agency, pilotage and maritime services in Chile, Peru, Argentina and Uruguay. 30 years connecting the world by sea.',
+        'hero-titulo':      'Maritime Agency Services with <span>Independence, Passion &amp; Innovation</span>',
+        'hero-subtitulo':   '30 years of leadership in maritime agency, pilotage and maritime services in Chile, Peru, Argentina and Uruguay.',
         'hero-btn1':        'Our Services',
         'hero-btn2':        'Contact Us',
         'stat1-label':      'Years of Experience',
@@ -218,9 +215,6 @@ const traducciones = {
         'footer-nav-titulo':    'Navigation',
         'footer-serv-titulo':   'Services',
         'footer-contacto-titulo': 'Contact',
-        'holding_eyebrow':      'Business Group',
-        'holding_title':        'Part of the B&amp;M Group',
-        'holding_desc':         'B&amp;M Agencia Marítima is part of a group of specialized companies that operate in a coordinated manner to provide comprehensive solutions in logistics, trade and maritime services.',
         'footer-copy':          '© 2026 B&M Maritime Agency S.A. All rights reserved.',
         'footer-design':        'Professional web design',
         'nav-equipo':           'Team',
@@ -271,8 +265,8 @@ const traducciones = {
         'nav-nosotros':     'Über uns',
         'nav-servicios':    'Dienstleistungen',
         'nav-contacto':     'Kontakt',
-        'hero-titulo':      'Maritime Lösungen der <span>Exzellenz</span>',
-        'hero-subtitulo':   'Führend in Schiffsagentur, Lotsen und maritimen Dienstleistungen in Chile, Peru, Argentinien und Uruguay. Seit 30 Jahren verbinden wir die Welt auf dem Seeweg.',
+        'hero-titulo':      'Schifffahrtsagentur Dienste mit <span>Unabhängigkeit, Leidenschaft &amp; Innovation</span>',
+        'hero-subtitulo':   '30 Jahre Führung in Schiffsagentur, Lotsen und maritimen Dienstleistungen in Chile, Peru, Argentinien und Uruguay.',
         'hero-btn1':        'Unsere Dienstleistungen',
         'hero-btn2':        'Kontakt aufnehmen',
         'stat1-label':      'Jahre Erfahrung',
@@ -347,9 +341,6 @@ const traducciones = {
         'footer-nav-titulo':    'Navigation',
         'footer-serv-titulo':   'Dienstleistungen',
         'footer-contacto-titulo': 'Kontakt',
-        'holding_eyebrow':      'Unternehmensgruppe',
-        'holding_title':        'Teil der B&amp;M Gruppe',
-        'holding_desc':         'B&amp;M Agencia Marítima ist Teil einer Gruppe spezialisierter Unternehmen, die koordiniert zusammenarbeiten, um umfassende Lösungen in Logistik, Handel und maritimen Dienstleistungen anzubieten.',
         'footer-copy':          '© 2026 B&M Maritime Agentur S.A. Alle Rechte vorbehalten.',
         'footer-design':        'Professionelles Webdesign',
         'nav-equipo':           'Team',
@@ -400,8 +391,8 @@ const traducciones = {
         'nav-nosotros':     '关于我们',
         'nav-servicios':    '服务',
         'nav-contacto':     '联系',
-        'hero-titulo':      '卓越的<span>海事解决方案</span>',
-        'hero-subtitulo':   '智利、秘鲁、阿根廷和乌拉圭领先的船舶代理、引航及海事服务提供商，30年来连接海上世界。',
+        'hero-titulo':      '海事代理服务：<span>独立、激情与创新</span>',
+        'hero-subtitulo':   '30年来在智利、秘鲁、阿根廷和乌拉圭船舶代理、引航及海事服务领域的卓越领导力。',
         'hero-btn1':        '我们的服务',
         'hero-btn2':        '联系我们',
         'stat1-label':      '年经验',
@@ -474,9 +465,6 @@ const traducciones = {
         'footer-nav-titulo':    '导航',
         'footer-serv-titulo':   '服务',
         'footer-contacto-titulo': '联系',
-        'holding_eyebrow':      '企业集团',
-        'holding_title':        'B&amp;M集团旗下成员',
-        'holding_desc':         'B&amp;M海事代理是一个专业企业集团的成员，各成员协调运营，在物流、贸易和海事服务领域提供综合解决方案。',
         'footer-copy':          '© 2026 B&M海事代理有限公司。版权所有。',
         'footer-design':        '专业网页设计',
         'nav-equipo':           '团队',
@@ -527,8 +515,8 @@ const traducciones = {
         'nav-nosotros':     'Sobre Nós',
         'nav-servicios':    'Serviços',
         'nav-contacto':     'Contato',
-        'hero-titulo':      'Soluções Marítimas de <span>Excelência</span>',
-        'hero-subtitulo':   'Líderes em agência marítima, praticagem e serviços marítimos no Chile, Peru, Argentina e Uruguai. 30 anos conectando o mundo pelo mar.',
+        'hero-titulo':      'Agência Marítima Serviços com <span>Independência, Paixão e Inovação</span>',
+        'hero-subtitulo':   '30 anos de liderança em agência marítima, praticagem e serviços marítimos no Chile, Peru, Argentina e Uruguai.',
         'hero-btn1':        'Nossos Serviços',
         'hero-btn2':        'Fale Conosco',
         'stat1-label':      'Anos de Experiência',
@@ -603,9 +591,6 @@ const traducciones = {
         'footer-nav-titulo':    'Navegação',
         'footer-serv-titulo':   'Serviços',
         'footer-contacto-titulo': 'Contato',
-        'holding_eyebrow':      'Grupo Empresarial',
-        'holding_title':        'Parte do Grupo B&amp;M',
-        'holding_desc':         'A B&amp;M Agência Marítima integra um grupo de empresas especializadas que operam de forma coordenada para oferecer soluções integrais em logística, comércio e serviços marítimos.',
         'footer-copy':          '© 2026 B&M Agência Marítima S.A. Todos os direitos reservados.',
         'footer-design':        'Design web profissional',
         'nav-equipo':           'Equipe',
@@ -656,8 +641,8 @@ const traducciones = {
         'nav-nosotros':     'À Propos',
         'nav-servicios':    'Services',
         'nav-contacto':     'Contact',
-        'hero-titulo':      'Solutions Maritimes d\'<span>Excellence</span>',
-        'hero-subtitulo':   'Leaders en agence maritime, pilotage et services maritimes au Chili, Pérou, Argentine et Uruguay. 30 ans à connecter le monde par la mer.',
+        'hero-titulo':      'Agence Maritime Services avec <span>Indépendance, Passion et Innovation</span>',
+        'hero-subtitulo':   '30 ans de leadership en agence maritime, pilotage et services maritimes au Chili, Pérou, Argentine et Uruguay.',
         'hero-btn1':        'Nos Services',
         'hero-btn2':        'Contactez-nous',
         'stat1-label':      'Ans d\'Expérience',
@@ -732,9 +717,6 @@ const traducciones = {
         'footer-nav-titulo':    'Navigation',
         'footer-serv-titulo':   'Services',
         'footer-contacto-titulo': 'Contact',
-        'holding_eyebrow':      'Groupe d\'Entreprises',
-        'holding_title':        'Membre du Groupe B&amp;M',
-        'holding_desc':         'B&amp;M Agencia Marítima fait partie d\'un groupe d\'entreprises spécialisées qui opèrent de manière coordonnée pour offrir des solutions intégrées en logistique, commerce et services maritimes.',
         'footer-copy':          '© 2026 B&M Agence Maritime S.A. Tous droits réservés.',
         'footer-design':        'Conception web professionnelle',
         'nav-equipo':           'Équipe',
@@ -785,8 +767,8 @@ const traducciones = {
         'nav-nosotros':     '会社概要',
         'nav-servicios':    'サービス',
         'nav-contacto':     'お問い合わせ',
-        'hero-titulo':      '卓越した<span>海事ソリューション</span>',
-        'hero-subtitulo':   'チリ、ペルー、アルゼンチン、ウルグアイにおける船舶代理、水先案内、海事サービスのリーダー。30年にわたり海上で世界をつないでいます。',
+        'hero-titulo':      '海事代理店のサービス：<span>独立性、情熱、革新</span>',
+        'hero-subtitulo':   'チリ、ペルー、アルゼンチン、ウルグアイにおける海事代理店、水先案内、海事サービス分野での30年のリーダーシップ。',
         'hero-btn1':        '当社のサービス',
         'hero-btn2':        'お問い合わせ',
         'stat1-label':      '年の実績',
@@ -861,9 +843,6 @@ const traducciones = {
         'footer-nav-titulo':    'ナビゲーション',
         'footer-serv-titulo':   'サービス',
         'footer-contacto-titulo': 'お問い合わせ',
-        'holding_eyebrow':      '企業グループ',
-        'holding_title':        'B&amp;Mグループのメンバー',
-        'holding_desc':         'B&amp;M海事代理店は、物流・貿易・海事サービスにおける包括的なソリューションを提供するため、連携して運営する専門企業グループの一員です。',
         'footer-copy':          '© 2026 B&M海事代理店 株式会社. 全著作権所有。',
         'footer-design':        'プロフェッショナルなウェブデザイン',
         'nav-equipo':           'チーム',
@@ -1134,7 +1113,12 @@ function animarContadores() {
                     const progreso = Math.min((ahora - inicio) / duracion, 1);
                     const easing = 1 - Math.pow(1 - progreso, 3); // ease-out cubic
                     entrada.target.textContent = Math.round(easing * objetivo) + sufijo;
-                    if (progreso < 1) requestAnimationFrame(actualizar);
+                    if (progreso < 1) {
+                        requestAnimationFrame(actualizar);
+                    } else if (objetivo === 30) {
+                        entrada.target.classList.add('estadistica-arcoiris');
+                        setTimeout(() => entrada.target.classList.remove('estadistica-arcoiris'), 2000);
+                    }
                 }
 
                 requestAnimationFrame(actualizar);
@@ -1384,152 +1368,6 @@ function iniciarFondoParallax() {
     }, { passive: true });
 }
 
-/* ============================================================
-   MAPA DE PRESENCIA - Imagen SVG con marcadores sobre puntos
-   ============================================================ */
-function iniciarMapaPresencia() {
-    const chileOficinas = [
-        { nombre: 'ARICA',                        email: 'b.m.ari@bm-maritima.cl',      agente: 'LUIS MIRANDA',     tel: '+569 4322 938' },
-        { nombre: 'IQUIQUE',                       email: 'b.m.iqq@bm-maritima.cl',      agente: 'LUIS MIRANDA',     tel: '+569 4322 938' },
-        { nombre: 'TOCOPILLA',                     email: 'b.m.toc@bm-maritima.cl',      agente: 'LUIS MIRANDA',     tel: '+569 4322 938' },
-        { nombre: 'MEJILLONES',                    email: 'b.m.mej@bm-maritima.cl',      agente: 'LUIS MIRANDA',     tel: '+569 4322 938' },
-        { nombre: 'ANTOFAGASTA',                   email: 'b.m.anf@bm-maritima.cl',      agente: 'LUIS MIRANDA',     tel: '+569 4322 938' },
-        { nombre: 'CHAÑARAL',                      email: 'b.m.caldera@bm-maritima.cl',  agente: 'GABRIEL OLIVARES', tel: '+56 9 4003 4578' },
-        { nombre: 'CALDERA',                       email: 'b.m.caldera@bm-maritima.cl',  agente: 'GABRIEL OLIVARES', tel: '+56 9 4003 4578' },
-        { nombre: 'HUASCO',                        email: 'b.m.huasco@bm-maritima.cl',   agente: 'ALEJANDRO ARAYA',  tel: '+56 9 4044 4095' },
-        { nombre: 'COQUIMBO',                      email: 'b.m.coq@bm-maritima.cl',      agente: 'JUAN SIERRA',      tel: '+56 9 9542 6057' },
-        { nombre: 'QUINTERO',                      email: 'b.m.qtv@bm-maritima.cl',      agente: 'JUAN SIERRA',      tel: '+56 9 9542 6057' },
-        { nombre: 'VALPARAÍSO',                    email: 'b.m.valpo@bm-maritima.cl',    agente: 'JUAN SIERRA',      tel: '+56 9 9542 6057' },
-        { nombre: 'SAN ANTONIO',                   email: 'b.m.sai@bm-maritima.cl',      agente: 'CARLOS MARTINEZ',  tel: '+56 9 7477 9317' },
-        { nombre: 'CONCEPCIÓN',                    email: 'b.m.conce@bm-maritima.cl',    agente: 'RODRIGO PUENTES',  tel: '+56 9 9751 3355' },
-        { nombre: 'PUERTO MONTT',                  email: 'puertomontt@bm-maritima.cl',  agente: 'CARLOS SCHISANO',  tel: '+56 9 8558 2924' },
-        { nombre: 'PUNTA ARENAS',                  email: 'magellan@bm-maritima.cl',     agente: 'RICARDO CÁRCAMO',  tel: '+56 9 9546 5226' },
-        { nombre: 'PUERTO NATALES / PTO. WILLIAMS',email: 'magellan@bm-maritima.cl',     agente: 'RICARDO CÁRCAMO',  tel: '+56 9 9546 5226' },
-    ];
-
-    const chilePopupHtml = `
-        <div class="popup-chile-header">🇨🇱 B&amp;M Agencia Marítima SPA — Chile</div>
-        <div class="popup-chile-scroll">
-            <div class="popup-chile-list">
-                ${chileOficinas.map(o => `
-                <div class="popup-chile-office">
-                    <div class="popup-chile-office-name">${o.nombre} OFFICE</div>
-                    <div class="popup-chile-office-email">✉ <a class="popup-email-link" href="mailto:${o.email}">${o.email}</a></div>
-                    <div class="popup-chile-office-agent">📱 ${o.agente}: ${o.tel}</div>
-                </div>`).join('')}
-            </div>
-        </div>`;
-
-    const argentinaPopupHtml = `
-        <div class="popup-chile-header">🇦🇷 B&amp;M Agencia Marítima — Argentina</div>
-        <div class="popup-chile-scroll">
-            <div class="popup-chile-list">
-                <div class="popup-chile-office">
-                    <div class="popup-chile-office-name">📍 Campana / Zárate</div>
-                    <div class="popup-chile-office-email">Av. Ing. A. Rocca 189 — Campana</div>
-                    <div class="popup-chile-office-agent">✉ <a class="popup-email-link" href="mailto:campana@bm-maritima.com.ar">campana@bm-maritima.com.ar</a></div>
-                </div>
-                <div class="popup-chile-office">
-                    <div class="popup-chile-office-name">📍 San Lorenzo / San Martín / Rosario</div>
-                    <div class="popup-chile-office-email">Bv. Urquiza 454 — San Lorenzo</div>
-                    <div class="popup-chile-office-agent">✉ <a class="popup-email-link" href="mailto:sanlorenzo@bm-maritima.com.ar">sanlorenzo@bm-maritima.com.ar</a></div>
-                </div>
-                <div class="popup-chile-office">
-                    <div class="popup-chile-office-name">📍 Bahía Blanca</div>
-                    <div class="popup-chile-office-email">Alvarado 38, Piso 5, Suite 1</div>
-                    <div class="popup-chile-office-agent">✉ <a class="popup-email-link" href="mailto:bahiablanca@bm-maritima.com.ar">bahiablanca@bm-maritima.com.ar</a></div>
-                </div>
-            </div>
-        </div>`;
-
-    const uruguayPopupHtml = `
-        <div class="popup-chile-header">🇺🇾 B&amp;M Agencia Marítima SAS — Uruguay</div>
-        <div class="popup-chile-scroll">
-            <div class="popup-chile-list">
-                <div class="popup-chile-office">
-                    <div class="popup-chile-office-name">📍 Oficina Montevideo</div>
-                    <div class="popup-chile-office-email">25 de Mayo 635, Unidad 801</div>
-                    <div class="popup-chile-office-agent">Montevideo, Uruguay</div>
-                </div>
-                <div class="popup-chile-office" style="margin-top:14px;">
-                    <div class="popup-chile-office-name" style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;opacity:0.7;margin-bottom:6px;">⚓ Puertos</div>
-                    <div class="popup-chile-office-agent">Montevideo</div>
-                    <div class="popup-chile-office-agent">Nueva Palmira</div>
-                    <div class="popup-chile-office-agent">Fray Bentos</div>
-                    <div class="popup-chile-office-agent">Punta Pereira</div>
-                    <div class="popup-chile-office-agent">Punta del Este</div>
-                </div>
-            </div>
-        </div>`;
-
-    const peruOficinas = [
-        { nombre: 'PAITA',               email: 'paita@bm-maritima.pe',     agente: 'Carlos Chirito Ch.',    tel: '+51 978 215 276' },
-        { nombre: 'BAYOVAR',             email: 'bayovar@bm-maritima.pe',   agente: 'Juan Carlos García G.', tel: '+51 960 920 142' },
-        { nombre: 'SALAVERRY',           email: 'salaverry@bm-maritima.pe', agente: 'Carlos Chirito Ch.',    tel: '+51 978 215 276' },
-        { nombre: 'CHANCAY',             email: 'chancay@bm-maritima.pe',   agente: 'Carlos Chirito Ch.',    tel: '+51 978 215 276' },
-        { nombre: 'CALLAO',              email: 'callao@bm-maritima.pe',    agente: 'Carlos Chirito Ch.',    tel: '+51 978 215 276' },
-        { nombre: 'PISCO',               email: 'pisco@bm-maritima.pe',     agente: 'Jesús Canaval H.',      tel: '+51 945 417 566' },
-        { nombre: 'MARCONA – SAN NICOLAS', email: 'marcona@bm-maritima.pe', agente: 'Jesús Canaval H.',      tel: '+51 945 417 566' },
-        { nombre: 'MATARANI',            email: 'matarani@bm-maritima.pe',  agente: 'Marco Mamani C.',       tel: '+51 936 205 312' },
-    ];
-
-    const peruPopupHtml = `
-        <div class="popup-chile-header">🇵🇪 Empresa Marítima B&amp;M S.A.C. — Perú</div>
-        <div class="popup-chile-scroll">
-            <div class="popup-chile-list">
-                ${peruOficinas.map(o => `
-                <div class="popup-chile-office">
-                    <div class="popup-chile-office-name">${o.nombre} OFFICE</div>
-                    <div class="popup-chile-office-email">✉ <a class="popup-email-link" href="mailto:${o.email}">${o.email}</a></div>
-                    <div class="popup-chile-office-agent">📱 ${o.agente}: ${o.tel}</div>
-                </div>`).join('')}
-            </div>
-        </div>`;
-
-    const popupData = { chile: chilePopupHtml, peru: peruPopupHtml, argentina: argentinaPopupHtml, uruguay: uruguayPopupHtml };
-
-    const overlay   = document.getElementById('popup-mapa-overlay');
-    const contenido = document.getElementById('popup-mapa-contenido');
-
-    function cerrarPopupMapa() {
-        if (overlay) overlay.classList.remove('abierto');
-    }
-
-    const closeBtn = document.getElementById('popup-mapa-close');
-    if (closeBtn) closeBtn.addEventListener('click', cerrarPopupMapa);
-    if (overlay) {
-        overlay.addEventListener('click', (e) => {
-            if (e.target === overlay) cerrarPopupMapa();
-        });
-    }
-
-    document.querySelectorAll('.marker-img').forEach(wrap => {
-        let moved = false;
-        wrap.addEventListener('mousedown', () => { moved = false; });
-        wrap.addEventListener('mousemove', () => { moved = true; });
-
-        wrap.addEventListener('click', () => {
-            if (moved) return;
-            const pais = wrap.dataset.pais;
-
-            const presenciaEl = wrap.querySelector('.marker-presencia');
-            if (presenciaEl) {
-                presenciaEl.classList.remove('seleccionado');
-                void presenciaEl.offsetWidth;
-                presenciaEl.classList.add('seleccionado');
-                setTimeout(() => presenciaEl.classList.remove('seleccionado'), 500);
-            }
-
-            if (!overlay || !contenido) return;
-            const label = wrap.querySelector('.marker-label')?.textContent || pais;
-            contenido.innerHTML = popupData[pais] ||
-                `<div style="font-family:Montserrat,sans-serif;font-weight:700;color:#fff;font-size:1.05rem;">${label}</div>`;
-            overlay.classList.remove('abierto');
-            void overlay.offsetWidth;
-            overlay.classList.add('abierto');
-        });
-    });
-}
 
 /* ============================================================
    HELPERS GLOBALES - abrirModal / cerrarModal
@@ -1564,26 +1402,6 @@ document.addEventListener('DOMContentLoaded', function() {
     iniciarScrollSuave();
     iniciarModales();
     iniciarMapa();
-    iniciarMapaPresencia();
     iniciarFondoParallax();
-    iniciarTooltipHolding();
 });
 
-function iniciarTooltipHolding() {
-    const box = document.createElement('div');
-    box.id = 'holding-tipbox';
-    document.body.appendChild(box);
-
-    document.querySelectorAll('.holding-item[data-tip]').forEach(function(item) {
-        item.addEventListener('mouseenter', function() {
-            const r = item.getBoundingClientRect();
-            box.textContent = item.dataset.tip;
-            box.style.left = (r.left + r.width / 2) + 'px';
-            box.style.top  = r.top + 'px';
-            box.classList.add('visible');
-        });
-        item.addEventListener('mouseleave', function() {
-            box.classList.remove('visible');
-        });
-    });
-}
