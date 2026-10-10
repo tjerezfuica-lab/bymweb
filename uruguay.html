@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uruguay — B&M Agencia Marítima</title>
+    <link rel="icon" type="image/png" href="LOGO_bandera.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a1f3a 0%, #1a3a5c 55%, #1e4d7a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 20% 30%, rgba(37,99,168,0.22) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 60% at 80% 70%, rgba(200,168,75,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .card {
+            background: rgba(255,255,255,0.10);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.28);
+            border-radius: 28px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.20);
+            padding: 56px 48px 48px;
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .logo-link img {
+            height: 60px;
+            width: auto;
+            margin-bottom: 36px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bandera {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.40);
+            margin-bottom: 24px;
+        }
+        .pais-titulo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .acento {
+            width: 48px;
+            height: 3px;
+            background: #c8a84b;
+            border-radius: 2px;
+            margin: 0 auto 24px;
+        }
+        .mensaje {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.80);
+            line-height: 1.65;
+            margin-bottom: 36px;
+        }
+        .mensaje strong { color: #c8a84b; }
+        .icono { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .btn-volver {
+            display: inline-block;
+            padding: 12px 32px;
+            background: rgba(37,99,168,0.30);
+            color: #ffffff;
+            border: 1.5px solid rgba(255,255,255,0.35);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            backdrop-filter: blur(6px);
+            transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+        }
+        .btn-volver:hover {
+            background: rgba(37,99,168,0.55);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <a href="index.html" class="logo-link">
+            <img src="LOGO.png" alt="B&M Agencia Marítima">
+        </a>
+        <img src="img/Uruguay.png" alt="Bandera de Uruguay" class="bandera">
+        <h1 class="pais-titulo">Uruguay</h1>
+        <div class="acento"></div>
+        <span class="icono">🚧</span>
+        <p class="mensaje">
+            Estamos trabajando en esta sección.<br>
+            <strong>Muy pronto</strong> encontrarás toda la información sobre nuestras operaciones en Uruguay.
+        </p>
+        <a href="index.html" class="btn-volver">← Volver al inicio</a>
+    </div>
+</body>
+</html>
