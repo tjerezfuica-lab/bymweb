@@ -1,2 +1,5 @@
 HEAD/originals/
 Documentos/
+
+.vercel
+.env*

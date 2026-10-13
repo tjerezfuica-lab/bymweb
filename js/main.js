@@ -1116,8 +1116,8 @@ function animarContadores() {
                     if (progreso < 1) {
                         requestAnimationFrame(actualizar);
                     } else if (objetivo === 30) {
-                        entrada.target.classList.add('estadistica-arcoiris');
-                        setTimeout(() => entrada.target.classList.remove('estadistica-arcoiris'), 2000);
+                        entrada.target.classList.add('estadistica-resaltado');
+                        setTimeout(() => entrada.target.classList.remove('estadistica-resaltado'), 3100);
                     }
                 }
 
