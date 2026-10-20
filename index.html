@@ -9,9 +9,9 @@
     <meta name="author" content="B&M Agencia Marítima">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" integrity="sha384-aQuvIWWIbpu/mSqULLDiUveyYiPoJzPKAWjUmGJ+Elm+N/LJhzfZqsutsfw870JS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
     <style>
         h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
         body { font-family: 'Poppins', sans-serif; }
@@ -351,6 +351,10 @@
                     <div class="form-grupo">
                         <label for="mensaje" data-i18n="form-mensaje-label">Mensaje *</label>
                         <textarea id="mensaje" name="mensaje" data-i18n-placeholder="form-mensaje-ph" placeholder="Cuéntenos sobre su consulta..." required></textarea>
+                    </div>
+                    <!-- Honeypot anti-spam: oculto para humanos, bots lo rellenan -->
+                    <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+                        <input type="text" name="website" id="hp-website" tabindex="-1" autocomplete="off" value="">
                     </div>
                     <button type="submit" class="btn btn-primario" style="width:100%;font-size:1rem;padding:16px;" data-i18n="form-btn">
                         Enviar Mensaje

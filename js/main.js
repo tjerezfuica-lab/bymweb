@@ -1168,6 +1168,10 @@ function iniciarFormulario() {
     formulario.addEventListener('submit', function(e) {
         e.preventDefault();
 
+        // Honeypot: si el campo oculto tiene valor, es un bot
+        const hp = formulario.querySelector('#hp-website');
+        if (hp && hp.value) return;
+
         const btn       = formulario.querySelector('button[type="submit"]');
         const exito     = document.getElementById('mensaje-exito');
         const paisSel   = formulario.pais ? formulario.pais.value : '';
