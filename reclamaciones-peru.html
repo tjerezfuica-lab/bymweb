@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamaciones y Quejas — Perú | B&M Agencia Marítima</title>
+    <link rel="icon" type="image/png" href="LOGO_bandera.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0a1f3a 0%, #1a3a5c 55%, #1e4d7a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 48px 20px 60px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 15% 25%, rgba(37,99,168,0.25) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 60% at 85% 75%, rgba(200,168,75,0.10) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .pagina {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 680px;
+        }
+
+        /* Cabecera */
+        .logo-wrap { text-align: center; }
+        .logo-wrap a img {
+            height: 62px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            filter: brightness(0) invert(1) drop-shadow(0 4px 14px rgba(0,0,0,0.35));
+        }
+        .logo-pais {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            margin-top: 10px;
+        }
+        .logo-tagline {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        /* Tarjeta del formulario */
+        .card {
+            width: 100%;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 20px;
+            padding: 36px 40px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .card-titulo {
+            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .card-icono { font-size: 1.6rem; margin-bottom: 10px; }
+        .linea {
+            width: 48px;
+            height: 3px;
+            background: #c8a84b;
+            border-radius: 2px;
+            margin-bottom: 28px;
+        }
+
+        /* Formulario */
+        form { display: flex; flex-direction: column; gap: 0; }
+
+        .fila {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .grupo {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .grupo label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.65);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .grupo input,
+        .grupo select,
+        .grupo textarea {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.18);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.88rem;
+            padding: 10px 13px;
+            width: 100%;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .grupo input::placeholder,
+        .grupo textarea::placeholder { color: rgba(255,255,255,0.3); }
+        .grupo input:focus,
+        .grupo select:focus,
+        .grupo textarea:focus {
+            outline: none;
+            border-color: #c8a84b;
+            background: rgba(255,255,255,0.12);
+        }
+        .grupo select option { background: #1a3a5c; color: #fff; }
+        .grupo textarea { resize: vertical; min-height: 100px; }
+
+        /* Honeypot */
+        .hp { position: absolute; left: -9999px; top: -9999px; }
+
+        /* Botón enviar */
+        .btn-enviar {
+            margin-top: 8px;
+            background: #c8a84b;
+            color: #0a1f3a;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 40px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            letter-spacing: 0.04em;
+            transition: opacity 0.2s, transform 0.2s;
+            align-self: flex-start;
+        }
+        .btn-enviar:hover { opacity: 0.88; transform: translateY(-1px); }
+        .btn-enviar:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+
+        /* Mensaje éxito */
+        .exito {
+            display: none;
+            margin-top: 18px;
+            padding: 14px 18px;
+            background: rgba(72,199,142,0.15);
+            border: 1px solid rgba(72,199,142,0.4);
+            border-radius: 10px;
+            color: #6ee7b7;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Botón volver */
+        .btn-volver {
+            display: inline-block;
+            padding: 12px 32px;
+            background: rgba(37,99,168,0.28);
+            color: #ffffff;
+            border: 1.5px solid rgba(255,255,255,0.32);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.88rem;
+            letter-spacing: 0.04em;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+        }
+        .btn-volver:hover {
+            background: rgba(37,99,168,0.52);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+        }
+
+        @media (max-width: 520px) {
+            .card { padding: 24px 20px; }
+            .fila { grid-template-columns: 1fr; gap: 0; }
+            .btn-enviar { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+<div class="pagina">
+
+    <div class="logo-wrap">
+        <a href="index.html">
+            <img src="LOGO.png" alt="B&M Agencia Marítima">
+        </a>
+        <p class="logo-pais">🇵🇪 Perú</p>
+        <p class="logo-tagline">Reclamaciones y Quejas</p>
+    </div>
+
+    <div class="card">
+        <div class="card-icono">📝</div>
+        <h1 class="card-titulo">Reclamaciones y Quejas — Perú</h1>
+        <div class="linea"></div>
+
+        <form id="form-reclamaciones">
+
+            <!-- Honeypot anti-spam -->
+            <div class="hp" aria-hidden="true">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" value="">
+            </div>
+
+            <div class="fila">
+                <div class="grupo">
+                    <label>Nombre completo *</label>
+                    <input type="text" name="nombre" placeholder="Juan Pérez" required>
+                </div>
+                <div class="grupo">
+                    <label>Empresa / Nave</label>
+                    <input type="text" name="empresa" placeholder="Nombre de la empresa o nave">
+                </div>
+            </div>
+
+            <div class="fila">
+                <div class="grupo">
+                    <label>Correo electrónico *</label>
+                    <input type="email" name="email" placeholder="correo@empresa.com" required>
+                </div>
+                <div class="grupo">
+                    <label>Teléfono</label>
+                    <input type="tel" name="telefono" placeholder="+51 9 XXXX XXXX">
+                </div>
+            </div>
+
+            <div class="grupo">
+                <label>Tipo de reclamación *</label>
+                <select name="tipo" required>
+                    <option value="">Seleccione una opción...</option>
+                    <option>Demora en el servicio</option>
+                    <option>Error en documentación</option>
+                    <option>Atención al cliente</option>
+                    <option>Daño a carga o nave</option>
+                    <option>Facturación / Tarifas</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="fila">
+                <div class="grupo">
+                    <label>Fecha del incidente</label>
+                    <input type="date" name="fecha">
+                </div>
+                <div class="grupo">
+                    <label>Puerto / Sede</label>
+                    <input type="text" name="puerto" placeholder="Ej: Callao, Paita...">
+                </div>
+            </div>
+
+            <div class="grupo">
+                <label>Descripción detallada *</label>
+                <textarea name="descripcion" placeholder="Describa su reclamación o queja con el mayor detalle posible..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Reclamación</button>
+            <div class="exito" id="exito-msg">
+                ✅ Su reclamación ha sido enviada. Nos comunicaremos a la brevedad.
+            </div>
+
+        </form>
+    </div>
+
+    <a href="index.html" class="btn-volver">← Volver al inicio</a>
+
+</div>
+
+<script>
+document.getElementById('form-reclamaciones').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Honeypot: si el campo oculto tiene valor, es un bot
+    const hp = this.querySelector('input[name="website"]');
+    if (hp && hp.value) return;
+
+    const btn  = this.querySelector('.btn-enviar');
+    const exito = document.getElementById('exito-msg');
+
+    btn.disabled    = true;
+    btn.textContent = 'Enviando...';
+
+    setTimeout(() => {
+        this.reset();
+        btn.style.display = 'none';
+        exito.style.display = 'block';
+    }, 1000);
+});
+</script>
+</body>
+</html>
